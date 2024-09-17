@@ -1,0 +1,231 @@
+body
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(/images/bg-desktop.png);
+    background-color: hsl(229, 57%, 11%);
+    background-repeat: no-repeat;
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    background-position: bottom;
+    background-size: 100vw 50vh;
+}
+
+.container
+{
+    display: flex;
+    gap: 10px;
+}
+
+.box1
+{
+    background-color: hsl(228, 56%, 26%);
+    padding-left: 50px;
+    padding-right: 140px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+}
+
+.box1 .image-box
+{
+    /* border: 2px solid yellow; */
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.box1 .image-box img
+{
+    width: 100%;
+}
+
+.box1 .file-icons-box
+{
+    display: flex;
+    gap: 20px;
+}
+
+.box1 .file-icons-box .icon-box
+{
+    background-color: hsl(229, 57%, 11%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.box2
+{
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    padding: 40px;
+    padding-right: 80px;
+    margin-top: 50px;
+    perspective: 1px;
+}
+
+.box2 .progress-container
+{
+    height: 10px;
+    border: 1px solid hsl(228, 56%, 26%);
+    width: 450px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(21,31,72);
+    /* overflow: hidden; */
+}
+
+.box2 .progress-container .progress
+{
+    width: 75%;
+    height: 10px;
+    border-radius: 20px;
+    border-right: 10px solid white;
+    border-top-right-radius: 50%;
+    background-image: linear-gradient(90deg,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+}
+
+.flex-progress
+{
+    display: flex;
+    margin-top: -20px;
+}
+
+.flex-progress .one
+{
+    margin-right: 370px;
+}
+
+.floating-gb
+{
+    z-index: 0;
+    margin-left: -230px;
+    margin-top: -80px;
+}
+.floating-gb .text
+{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+
+.floating-gb .triangle
+{
+    width: 0;
+    height: 0;
+    border-top: 50px solid white;
+    border-left: 50px solid transparent;
+    margin-left: 95px;
+}
+
+.floating-gb .text .digit
+{
+    color: black;
+    font-weight: 700;
+}
+
+.floating-gb .text .left
+{
+    font-weight: 400;
+} 
+
+
+/* For mobile dislay */
+@media(max-width: 414px)
+{
+    body
+    {
+        overflow: hidden;
+        background-image: url(/images/bg-desktop.png);
+        background-color: hsl(229, 57%, 11%);
+        background-repeat: no-repeat;
+        font-size: 14px;
+        font-family: "Raleway", sans-serif;
+        background-position: bottom;
+        background-size: 50vw 100vh;
+        height: 95vh;
+        background-size: cover;
+        flex-direction: column;
+    }
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 0px;
+        overflow: hidden;
+    }   
+
+    .box2
+    {
+        overflow: hidden;
+        margin-top: 20px;
+        border-top-right-radius: 10px;
+        perspective: 1px;
+        padding-bottom: 60px;
+    }
+
+
+    .box2 .progress-container
+    {
+        height: 10px;
+        border: 1px solid hsl(228, 56%, 26%);
+        width: 270px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        background-color: rgb(21,31,72);
+    }
+
+    .box2 .progress-container .progress
+    {
+        width: 75%;
+        height: 10px;
+        border-radius: 20px;
+        border-right: 10px solid white;
+        border-top-right-radius: 50%;
+        background-image: linear-gradient(90deg,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    }
+
+    .flex-progress
+    {
+        display: flex;
+        margin-top: -20px;
+    }
+
+    .flex-progress .one
+    {
+        margin-right: 200px;
+    }
+
+    .floating-gb
+    {
+        margin-top: -30px;
+        margin-left: -30px;
+        z-index: 3;
+    }
+    
+    .floating-gb .text
+    {
+        background-color: white;
+        color: black;
+        padding: 10px 30px;
+        border-radius: 10px;
+    } 
+
+    .floating-gb .triangle
+    {
+        width: 0;
+        height: 0;
+        border-top: none;
+        border-left: none;
+        margin-left: 95px;
+    }
+}
